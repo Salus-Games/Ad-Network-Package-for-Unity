@@ -115,8 +115,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b099e39447f9a1440b0a9ca160c155d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  appID: 
-  appSignature: 
+  appID: 53d0fda989b0bb3fefe60b35
+  appSignature: cd48dfa6991a633b9b01ec6bf958c900b446ac49
 --- !u!4 &108865039
 Transform:
   m_ObjectHideFlags: 0
@@ -234,11 +234,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 6cefad8fe2444234b89fbf2454be5298, type: 2}
       propertyPath: appID
-      value: 
+      value: 53d0fda989b0bb3fefe60b35
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 6cefad8fe2444234b89fbf2454be5298, type: 2}
       propertyPath: appSignature
-      value: 
+      value: cd48dfa6991a633b9b01ec6bf958c900b446ac49
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6cefad8fe2444234b89fbf2454be5298, type: 2}

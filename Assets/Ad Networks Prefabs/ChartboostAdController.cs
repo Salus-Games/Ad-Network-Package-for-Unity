@@ -26,10 +26,12 @@ public class ChartboostAdController : MonoBehaviour {
 	}
 	
 	void Update(){
+		#if UNITY_ANDROID
 		if (Input.GetKeyUp(KeyCode.Escape)) {
 			if (CBBinding.onBackPressed())
 				return;
 		}
+		#endif
 	}
 
 	void OnEnable() {
@@ -39,12 +41,16 @@ public class ChartboostAdController : MonoBehaviour {
 	}
 
 	void OnApplicationPause(bool paused) {
+		#if UNITY_ANDROID			
 		// Manage Chartboost plugin lifecycle
 		CBBinding.pause(paused);
+		#endif
 	}
 	
 	void OnDisable() {
+		#if UNITY_ANDROID
 		// Shut down the Chartboost plugin
 		CBBinding.destroy();
+		#endif
 	}
 }
