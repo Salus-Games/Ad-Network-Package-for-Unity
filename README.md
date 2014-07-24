@@ -11,6 +11,18 @@ This is a simple Unity Package to get AdMob and Chartboost ads into your Apps.
 No more steps needed to work
 
 ### iOS ###
-1. In xcode navigate to Build Phases-> Link Binary with Libaries, click the + and add StoreKit.framework
+1. In xcode navigate to Build Phases-> Link Binary with Libaries, click the + and add the following if they are not added
+
+* AdSupport
+* AudioToolbox
+* AVFoundation
+* CoreGraphics
+* CoreTelephony
+* MessageUI
+* StoreKit
+* SystemConfiguration
+
+2. Add the -ObjC linker flag to your Other Linker Flags in Build Settings.
+
 
 Contact: support@salusgames.com
