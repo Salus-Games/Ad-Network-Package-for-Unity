@@ -18,6 +18,15 @@ public class DemoGUI : MonoBehaviour {
 			CBBinding.cacheMoreApps();
 		}
 
+		if(GUI.Button(new Rect(0,100,200,30),"Hide Google Ad"))
+		{
+			GoogleAdController.HideBanner();
+		}
+
+		if(GUI.Button(new Rect(0,200,200,30),"Show Google Ad"))
+		{
+			GoogleAdController.ShowBanner();
+		}
 
 		
 	}
