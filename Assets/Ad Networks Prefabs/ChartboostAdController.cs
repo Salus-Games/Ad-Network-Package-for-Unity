@@ -3,12 +3,12 @@ using System.Collections;
 using Chartboost;
 
 public class ChartboostAdController : MonoBehaviour {
-
+	
 	static GameObject chartboostAdBannerObject;	
 	
 	public string appID;
 	public string appSignature;
-
+	
 	void Awake()
 	{
 		//check if chartboostAdBannerObject Exits
@@ -33,13 +33,28 @@ public class ChartboostAdController : MonoBehaviour {
 		}
 		#endif
 	}
-
+	
 	void OnEnable() {
 		CBBinding.init(appID, appSignature);
-		CBBinding.cacheInterstitial(null);
-		CBBinding.cacheMoreApps();
+		if(!CBBinding.hasCachedInterstitial(null)){
+			CBBinding.cacheInterstitial(null);
+		}
+		if(!CBBinding.hasCachedMoreApps()){
+			CBBinding.cacheMoreApps();
+		}
 	}
-
+	
+	//needed for apps to show when a new level is loaded, gives error otherwise
+	void OnLevelWasLoaded(){
+		CBBinding.init(appID, appSignature);
+		if(!CBBinding.hasCachedInterstitial(null)){
+			CBBinding.cacheInterstitial(null);
+		}
+		if(!CBBinding.hasCachedMoreApps()){
+			CBBinding.cacheMoreApps();
+		};
+	}
+	
 	void OnApplicationPause(bool paused) {
 		#if UNITY_ANDROID			
 		// Manage Chartboost plugin lifecycle
