@@ -44,17 +44,6 @@ public class ChartboostAdController : MonoBehaviour {
 		}
 	}
 	
-	//needed for apps to show when a new level is loaded, gives error otherwise
-	void OnLevelWasLoaded(){
-		CBBinding.init(appID, appSignature);
-		if(!CBBinding.hasCachedInterstitial(null)){
-			CBBinding.cacheInterstitial(null);
-		}
-		if(!CBBinding.hasCachedMoreApps()){
-			CBBinding.cacheMoreApps();
-		};
-	}
-	
 	void OnApplicationPause(bool paused) {
 		#if UNITY_ANDROID			
 		// Manage Chartboost plugin lifecycle
