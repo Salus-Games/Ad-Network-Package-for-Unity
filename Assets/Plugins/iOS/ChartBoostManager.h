@@ -7,7 +7,8 @@
 
 
 #import <Foundation/Foundation.h>
-#import "ChartBoost.h"
+#import "Chartboost.h"
+#import "CBInPlay.h"
 
 #ifdef UNITY_4_2_0
   #import "UnityAppController.h"
@@ -16,29 +17,26 @@
 #endif
 
 
-
 @interface ChartBoostManager : NSObject <ChartboostDelegate>
 
-@property (nonatomic) BOOL waitingForPause;
+@property (nonatomic) BOOL shouldPauseClick;
+@property (nonatomic) BOOL shouldRequestFirstSession;
 
+// Properties used by delegates
+@property (nonatomic) BOOL hasCheckedWithUnityToDisplayInterstitial;
+@property (nonatomic) BOOL hasCheckedWithUnityToDisplayRewardedVideo;
+@property (nonatomic) BOOL hasCheckedWithUnityToDisplayMoreApps;
+@property (nonatomic) BOOL unityResponseShouldDisplayInterstitial;
+@property (nonatomic) BOOL unityResponseShouldDisplayRewardedVideo;
+@property (nonatomic) BOOL unityResponseShouldDisplayMoreApps;
+
+@property (nonatomic, retain) NSString *gameObjectName;
 
 + (ChartBoostManager*)sharedManager;
 
-
 - (void)startChartBoostWithAppId:(NSString*)appId appSignature:(NSString*)appSignature;
 
-- (void)cacheInterstitial:(NSString*)location;
-
-- (void)showInterstitial:(NSString*)location;
-
-- (void)cacheMoreApps;
-
-- (void)showMoreApps;
-
-- (void)pauseUnity;
-
 @end
-
 
 
 #ifdef UNITY_4_2_0
