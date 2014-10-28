@@ -229,9 +229,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a24bcc451f3cb4f67bee6444d975819e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  adUnitId: 
-  adTop: 0
-  adBottom: 0
+  googleAdID: 
+  amazonAdID: 
+  iosAdID: 
+  targetPlatform: 1
+  adLocation: 1
 --- !u!4 &345407667
 Transform:
   m_ObjectHideFlags: 0
@@ -341,6 +343,26 @@ Prefab:
     - target: {fileID: 11400000, guid: 4f7abe19f7c24f14080b5663e82c7348, type: 2}
       propertyPath: adBottom
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 4f7abe19f7c24f14080b5663e82c7348, type: 2}
+      propertyPath: targetPlatform
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 4f7abe19f7c24f14080b5663e82c7348, type: 2}
+      propertyPath: googleAdID
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 4f7abe19f7c24f14080b5663e82c7348, type: 2}
+      propertyPath: amazonAdID
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 4f7abe19f7c24f14080b5663e82c7348, type: 2}
+      propertyPath: iosAdID
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 4f7abe19f7c24f14080b5663e82c7348, type: 2}
+      propertyPath: adLocation
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4f7abe19f7c24f14080b5663e82c7348, type: 2}
